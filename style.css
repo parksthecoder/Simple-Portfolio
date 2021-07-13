@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Custom Properities using variables- will NOT use - for Reference ONLY */
+/* Pixel is a static measurement, while percent and EM are relative measurements */
+/* :root {
+    --ff-primary: sans-serif;
+    --ff-secondary: Arial;
+    
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+} */
+
+/* Font Sizes bigger at larger screen sizes
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+} */
+
+/* General styles */
+
+body {
+    background: #FEFEE3;
+    color: #0A2342;
+    margin: 0;
+    font-family: fantasy, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    /* 1.6 default line height */
+}
+
+section {
+    padding: 80px 32px;
+}
+
+/* General Image CSS - rid of some issues */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* made strong appear */
+strong {
+    font-weight: 900;
+}
+
+/* Typography */
+
+
+/* general for h1 */
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+    /* maybe a small margin top/bottom */
+}
+
+/* defining font-size for h1, h2, h3 */
+h1 { font-size: 48px;}
+h2 { font-size: 36px;}
+h3 { font-size: 10px;}
+
+.nav-item {
+    display: inline;
+}
+
+.section-title {
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+.section-title-intro {
+    font-weight: 300;
+}
+/* strong displays on its own line/block */
+.section-title-intro strong {
+    display: block;
+}
+
+.section-subtitle {
+    margin: 0;
+    font-size: 20px;
+}
+
+.section-subtitle-intro, 
+.section-subtitle-expertise,
+.section-subtitle-about-me {
+    background: #4C956C; 
+    color: #FEFEE3;
+    padding: 4px 16px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 16px;
+}
+
+.section-subtitle-expertise,
+.section-subtitle-about-me {
+    margin: auto;
+    width: fit-content;
+}
+
+
+/* link styling with pseudo-classes */
+a:link { color: #0A2342; }
+a:visited { color: purple; }
+a:hover { color: #4C956C; }
+a:active { color: pink; }
+
+
+
+
+/* Intro Section */
+
+
+.intro {
+    position: relative;
+}
+
+/* Styling for Portfoli Picture */
+.intro-img {
+    box-shadow: 4px 4px 12px rgba(0,0,0,.25),
+    2px 2px 4px rgba(0,0,0,.15);
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-template-areas:
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+
+    .intro-img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section-subtitle-intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -24px;
+        width: calc(100% + 24px);
+    }
+}
+
+/* My Expertise Section */
+
+
+
+.expertise-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expertise-list {
+    margin-left: 45%;
+    width: 60%;
+    text-align: left;
+}
+
+
+
+
+
+/* About Me (Who I am) Article/Section */
+.about-me,
+.expertise {
+    text-align: center;
+}
+
+.about-me-body {
+    margin-left: 20%;
+    width: 60%;
+    text-align: left;
+}
+
+
+
+
+/* Footer Styling */
+
+.footer {
+    /* margin-left: 45%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+/* another way to center footer  */
+/* 
+ul { 
+    text-align: center; 
+    list-style: inside; 
+} */
